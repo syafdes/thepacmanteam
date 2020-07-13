@@ -9,6 +9,11 @@
     <h1>PUT TITLE</h1>
     
     <script type="text/processing">
+	//import stuff for pathfinding
+	import java.util.Deque;
+	import java.util.Iterator;
+	import java.util.LinkedList;
+
 	Pacman pacman;
 	PImage img;//background image 
 
@@ -274,7 +279,7 @@
 		}
 	}
 	//**********************************************************************************************************************************************************************
-	void Path {
+	class Path {
 		LinkedList<Node> path = new LinkedList<Node>();//a list of nodes 
 		float distance = 0;//length of path
 		float distToFinish =0;//the distance between the final node and the paths goal
@@ -326,7 +331,7 @@
 		}
 	}
 	//***************************************************************************************************************************************************************************************
-	void Tile {
+	class Tile {
 		boolean wall = false;
 		boolean dot = false;
 		boolean bigDot = false;
@@ -356,7 +361,7 @@
 		}
 	}
 	//*************************************************************************************************************************************************************************************
-	void Node {
+	class Node {
 
 		LinkedList<Node> edges = new LinkedList<Node>();//all the nodes this node is connected to 
 		float x;
@@ -417,7 +422,7 @@
 		}
 	}
 	//********************************************************************************************************************************************************************************************
-	void Pacman {
+	class Pacman {
 		PVector pos;
 		PVector vel = new PVector(-1, 0);
 
@@ -787,7 +792,7 @@
 		}
 	}
 	//*************************************************************************************************************************************************************************************************
-	void Inky {
+	class Inky {
 		PVector pos = new PVector(8*16 +8, 1*16+8);//starting position
 		PVector vel = new PVector(1, 0);
 		Path bestPath; // the variable stores the path the ghost will be following
@@ -1021,7 +1026,7 @@
 		}
 	}
 	//****************************************************************************************************************************************************************************************************
-	void Blinky {
+	class Blinky {
 		PVector pos = new PVector(13*16 +8, 11*16+8);//starting position
 		PVector vel = new PVector(1, 0);
 		Path bestPath; // the variable stores the path the ghost will be following
@@ -1241,7 +1246,7 @@
 		}
 	}
 	//*************************************************************************************************************************************************************************************************
-	void Clyde {
+	class Clyde {
 			PVector pos = new PVector(1*16 +8, 29*16+8);
 		PVector vel = new PVector(1, 0);
 		Path bestPath; // the variable stores the path the ghost will be following
