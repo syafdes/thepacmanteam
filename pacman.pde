@@ -1,7 +1,3 @@
-java.util.Deque;
-java.util.Iterator;
-java.util.LinkedList;
-
 Pacman pacman;
 PImage img;//background image 
 
