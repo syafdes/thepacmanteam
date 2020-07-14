@@ -1,8 +1,3 @@
-//import stuff for pathfinding
-import java.util.Deque;
-import java.util.Iterator;
-import java.util.LinkedList;
-
 Pacman pacman;
 PImage img;//background image 
 
