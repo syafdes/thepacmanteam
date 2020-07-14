@@ -267,7 +267,7 @@ Path AStar(Node start, Node finish, PVector vel)
   }
 }
 //**********************************************************************************************************************************************************************
-class Path {
+void Path {
   LinkedList<Node> path = new LinkedList<Node>();//a list of nodes 
   float distance = 0;//length of path
   float distToFinish =0;//the distance between the final node and the paths goal
@@ -319,7 +319,7 @@ class Path {
   }
 }
 //***************************************************************************************************************************************************************************************
-class Tile {
+void Tile {
   boolean wall = false;
   boolean dot = false;
   boolean bigDot = false;
@@ -349,7 +349,7 @@ class Tile {
   }
 }
 //*************************************************************************************************************************************************************************************
-class Node {
+void Node {
 
   LinkedList<Node> edges = new LinkedList<Node>();//all the nodes this node is connected to 
   float x;
@@ -410,7 +410,7 @@ class Node {
   }
 }
 //********************************************************************************************************************************************************************************************
-class Pacman {
+void Pacman {
   PVector pos;
   PVector vel = new PVector(-1, 0);
   
@@ -546,7 +546,7 @@ class Pacman {
   }
 }
 //************************************************************************************************************************************************************************************************
-class Pinky {
+void Pinky {
   PVector pos = new PVector(23*16 +8, 26*16+8);
   PVector vel = new PVector(1, 0);
   Path bestPath; // the variable stores the path the ghost will be following
@@ -780,7 +780,7 @@ class Pinky {
   }
 }
 //*************************************************************************************************************************************************************************************************
-class Inky {
+void Inky {
   PVector pos = new PVector(8*16 +8, 1*16+8);//starting position
   PVector vel = new PVector(1, 0);
   Path bestPath; // the variable stores the path the ghost will be following
@@ -1014,7 +1014,7 @@ class Inky {
   }
 }
 //****************************************************************************************************************************************************************************************************
-class Blinky {
+void Blinky {
   PVector pos = new PVector(13*16 +8, 11*16+8);//starting position
   PVector vel = new PVector(1, 0);
   Path bestPath; // the variable stores the path the ghost will be following
@@ -1234,7 +1234,7 @@ class Blinky {
   }
 }
 //*************************************************************************************************************************************************************************************************
-class Clyde {
+void Clyde {
     PVector pos = new PVector(1*16 +8, 29*16+8);
   PVector vel = new PVector(1, 0);
   Path bestPath; // the variable stores the path the ghost will be following
