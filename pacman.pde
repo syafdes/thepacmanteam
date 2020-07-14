@@ -39,7 +39,7 @@ int[][] tilesRepresentation = {
   {1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1}, 
   {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}};//its not sexy but it does the job
 //--------------------------------------------------------------------------------------------------------------------------------------------------
-// @pjs preload="map.jpg";
+
 void setup() {
   frameRate(100);
   size(448, 496);
@@ -263,7 +263,7 @@ Path AStar(Node start, Node finish, PVector vel)
   }
 }
 //**********************************************************************************************************************************************************************
-void Path {
+class Path {
   LinkedList<Node> path = new LinkedList<Node>();//a list of nodes 
   float distance = 0;//length of path
   float distToFinish =0;//the distance between the final node and the paths goal
@@ -315,7 +315,7 @@ void Path {
   }
 }
 //***************************************************************************************************************************************************************************************
-void Tile {
+class Tile {
   boolean wall = false;
   boolean dot = false;
   boolean bigDot = false;
@@ -345,7 +345,7 @@ void Tile {
   }
 }
 //*************************************************************************************************************************************************************************************
-void Node {
+class Node {
 
   LinkedList<Node> edges = new LinkedList<Node>();//all the nodes this node is connected to 
   float x;
@@ -406,7 +406,7 @@ void Node {
   }
 }
 //********************************************************************************************************************************************************************************************
-void Pacman {
+class Pacman {
   PVector pos;
   PVector vel = new PVector(-1, 0);
   
@@ -542,7 +542,7 @@ void Pacman {
   }
 }
 //************************************************************************************************************************************************************************************************
-void Pinky {
+class Pinky {
   PVector pos = new PVector(23*16 +8, 26*16+8);
   PVector vel = new PVector(1, 0);
   Path bestPath; // the variable stores the path the ghost will be following
@@ -776,7 +776,7 @@ void Pinky {
   }
 }
 //*************************************************************************************************************************************************************************************************
-void Inky {
+class Inky {
   PVector pos = new PVector(8*16 +8, 1*16+8);//starting position
   PVector vel = new PVector(1, 0);
   Path bestPath; // the variable stores the path the ghost will be following
@@ -1010,7 +1010,7 @@ void Inky {
   }
 }
 //****************************************************************************************************************************************************************************************************
-void Blinky {
+class Blinky {
   PVector pos = new PVector(13*16 +8, 11*16+8);//starting position
   PVector vel = new PVector(1, 0);
   Path bestPath; // the variable stores the path the ghost will be following
@@ -1230,7 +1230,7 @@ void Blinky {
   }
 }
 //*************************************************************************************************************************************************************************************************
-void Clyde {
+class Clyde {
     PVector pos = new PVector(1*16 +8, 29*16+8);
   PVector vel = new PVector(1, 0);
   Path bestPath; // the variable stores the path the ghost will be following
