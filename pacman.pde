@@ -4,6 +4,7 @@ import java.util.Iterator;
 import java.util.LinkedList;
 
 Pacman pacman;
+/* @pjs preload="map.jpg"; */
 PImage img;//background image 
 
 Pinky pinky;
